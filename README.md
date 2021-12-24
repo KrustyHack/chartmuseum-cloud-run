@@ -6,6 +6,18 @@ Setup Chartmuseum service on Cloud Run with Terraform.
 
 This stack is perfectible (eg. : add CI/CD) and is only given to you as a PoC to build your perfect Cloud Run service with Terraform.
 
+Don't forget to edit `main.tf` to match your need :
+
+```hcl
+  cloud {
+    organization = "blackcreeper-network"
+
+    workspaces {
+      name = "blackcreeper-network_chartmuseum-cloud-run"
+    }
+  }
+```
+
 ## Prerequisites
 
 * IAM permissions for the service account using to run `terraform`

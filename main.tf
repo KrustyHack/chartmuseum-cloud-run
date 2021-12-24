@@ -1,5 +1,12 @@
 terraform {
-  # Doc for version constraint : https://www.terraform.io/docs/language/expressions/version-constraints.html#version-constraint-syntax
+  cloud {
+    organization = "blackcreeper-network"
+
+    workspaces {
+      name = "blackcreeper-network_chartmuseum-cloud-run"
+    }
+  }
+
   required_version = ">= 1.0"
 
   required_providers {
